@@ -521,7 +521,7 @@ flex-shrink: 0;
 }
 
 
-/* contact page */
+/* contact page ====================================== */
 
 .label {
     display: block;
@@ -539,6 +539,75 @@ flex-shrink: 0;
     font-size: 17px;
     color: #fff;
     font-weight: 600;
+}
+
+/* blog ================================================= */
+
+.blog-meta {
+    font-size: 15px;
+    font-style: italic;
+    color: #fab526;
+    font-weight: 900;
+    font-family: 'Open Sans','Open Sans',helvetica,'helvetica neue',arial,sans-serif;
+    margin-bottom: 15px;
+}
+
+.blog-text {
+    margin-bottom: 1.5em;
+    line-height: 180%;
+    font-size: 15px;
+    color: #5d5d5d;
+}
+
+.blog-text.italic {
+    font-style: italic;
+}
+
+.blog-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.blog-item {
+    position: relative;
+    min-height: 430px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    margin-bottom: 30px;
+}
+
+.blog-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .3);
+}
+
+.blog-item__title {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 1.5em;
+    font-size: 36px;
+    text-align: center;
+    color: #fff;
+}
+
+.blog-item__desc {
+    position: relative;
+    z-index: 1;
+    line-height: 130%;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
 }
 
 @media screen and (max-width: 992px) {
