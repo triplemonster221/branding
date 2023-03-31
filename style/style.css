@@ -550,6 +550,11 @@ flex-shrink: 0;
     margin-bottom: 30px;
 }
 
+.post-thumbnail img {
+    margin-top: -120px;
+    width: 100%;
+}
+
 .blog-meta {
     font-size: 15px;
     font-style: italic;
@@ -843,6 +848,10 @@ padding: 10px 0 25px;
     }
     .related-item {
         text-align: center;
+    }
+
+    .post-thumbnail img {
+        margin-top: 0;
     }
 }
 
