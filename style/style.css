@@ -543,6 +543,13 @@ flex-shrink: 0;
 
 /* blog ================================================= */
 
+.post-thumbnail {
+    width: 100%;
+    overflow: hidden;
+    max-height: 400px;
+    margin-bottom: 30px;
+}
+
 .blog-meta {
     font-size: 15px;
     font-style: italic;
@@ -761,6 +768,40 @@ flex-shrink: 0;
     font-size: 13px;
 }
 
+.lieave-form {
+    padding-top: 50px;
+}
+
+.lieave-form__form {
+    text-align: center;
+}
+
+.lieave-form__form label{
+    text-align: center;
+    font-weight: 400;
+}
+
+.lieave-form__form .btn {
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 0;
+}
+
+.lieave-form__cooccies {
+padding: 10px 0 25px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-row .label {
+    width: 33%;
+    
+}
+
 @media screen and (max-width: 992px) {
     .logo {
         margin-bottom: 40px;
@@ -796,6 +837,13 @@ flex-shrink: 0;
         flex: 0 0 100%;
         max-width: 100%;
     }
+
+    .related-post-inner {
+        flex-direction: column;
+    }
+    .related-item {
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -810,5 +858,18 @@ flex-shrink: 0;
 
     .sign {
         padding-top: 30px;
+    }
+
+    .form-row {
+        flex-wrap: wrap;
+    }
+
+    .form-row .label {
+        width: 100%;
+        
+    }
+    .block-avtor {
+        flex-direction: column;
+        align-items: center;
     }
 }
