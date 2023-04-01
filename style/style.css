@@ -9,13 +9,11 @@ html {
     box-sizing: inherit;
 }
 
-/* .row {
-    width: 100%;
+.container {
+    width: 1200px;
+    padding-right: 40px;
+    padding-left: 40px;
 }
-
-.row > div {
-    padding: 0;
-} */
 
 body {
     font-family: 'Open Sans',helvetica,'helvetica neue',arial,sans-serif;
@@ -51,17 +49,13 @@ textarea {
     font-family: inherit;
 }
 
-.container {
-    /* max-width: 1200px;
-    padding: 0 40px;
-    margin: 0 auto; */
-}
 
-@media (max-width: 564px) {
+
+/* @media (max-width: 564px) {
     .container {
         padding: 0 10px;
     } 
-}
+} */
 
 
 .header {
@@ -201,6 +195,10 @@ img {
     padding: 0 0 40px 0;
 }
 
+.content-right {
+    padding-left: 20px;
+}
+
 .page-title  {
     color: #000;
     margin-bottom: 10px;
@@ -252,7 +250,7 @@ img {
 .sign {
     margin-bottom: 50px;
 }
-.sign-title {
+.sidebar-title {
     font-weight: 900;
     font-size: 17px;
     border-bottom: 1px solid #e4e4e4;
@@ -260,11 +258,18 @@ img {
     margin-bottom: 10px;
     margin-top: 0;
     font-family: 'Open Sans', helvetica, 'helvetica neue', arial, sans-serif;
+    color: #404040;
 }
 
 .newsletter-example {
     display: flex;
     width: 100%;
+}
+
+.newsletter-adv {
+    max-width: 300px;
+    width: 100%;
+    height: 300px;
 }
 
 .newsletter-example input[type="email"] {
@@ -295,7 +300,8 @@ margin-bottom: 50px;
 
 .pbpost {
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
+    overflow: hidden;
     
 }
 
@@ -310,11 +316,12 @@ flex-shrink: 0;
 }
 
 .pbpost__title {
-    font-weight: 900;
-    font-size: 17px;
+    font-weight: 600;
+    font-size: 14px;
     margin-top: 0;
     font-family: 'Open Sans', helvetica, 'helvetica neue', arial, sans-serif;
-    color: #404040;
+    color: #000;
+    white-space: nowrap;
 }
 
 .pbpost__meta {
@@ -495,27 +502,15 @@ flex-shrink: 0;
     padding: 10px;
     box-shadow: 0 0 0;
     display: block;
-    /* -webkit-box-sizing: border-box; */
     box-sizing: border-box;
     width: 100%;
     height: 2.4375rem;
     margin: 0 0 1rem;
-    /* padding: 0.5rem; */
-    /* border: 1px solid #cacaca; */
-    /* border-radius: 0; */
-    /* background-color: #fefefe; */
-    /* -webkit-box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1); */
-    /* box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1); */
     font-family: inherit;
     font-size: 1rem;
     font-weight: normal;
     line-height: 1.5;
-    /* color: #0a0a0a; */
-    /* -webkit-transition: border-color 0.25s ease-in-out, -webkit-box-shadow 0.5s; */
-    /* transition: border-color 0.25s ease-in-out, -webkit-box-shadow 0.5s; */
-    /* transition: box-shadow 0.5s, border-color 0.25s ease-in-out; */
     transition: box-shadow 0.5s, border-color 0.25s ease-in-out, -webkit-box-shadow 0.5s;
-    /* -webkit-appearance: none; */
     -moz-appearance: none;
     appearance: none;
 }
@@ -686,6 +681,15 @@ flex-shrink: 0;
 .related-post__title {
     text-align: center;
     margin-bottom: 20px;
+
+    color: #000;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-style: normal;
+    line-height: 140%;
+    font-weight: 700;
+    font-family: 'Open Sans','Open Sans',helvetica,'helvetica neue',arial,sans-serif;
+    text-align: center;
 }
 
 .related-item {
@@ -726,6 +730,13 @@ flex-shrink: 0;
 
 .comments-title {
     margin-bottom: 20px;
+
+    color: #000;
+    font-size: 30px;
+    font-style: normal;
+    line-height: 140%;
+    font-weight: 700;
+    font-family: 'Open Sans','Open Sans',helvetica,'helvetica neue',arial,sans-serif;
 }
 
 
@@ -775,6 +786,20 @@ flex-shrink: 0;
 
 .lieave-form {
     padding-top: 50px;
+    text-align: center;
+}
+
+.lieave-form__title {
+    color: #000;
+    margin-bottom: 10px;
+    font-size: 28px;
+    margin-top: 40px;
+    padding-top: 40px;
+    font-style: normal;
+    line-height: 140%;
+    font-weight: 700;
+    font-family: 'Open Sans','Open Sans',helvetica,'helvetica neue',arial,sans-serif;
+    border-top: 1px solid rgba(0,0,0,.1);
 }
 
 .lieave-form__form {
@@ -853,6 +878,10 @@ padding: 10px 0 25px;
     .post-thumbnail img {
         margin-top: 0;
     }
+
+    .content-right {
+        padding-left: 0;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -880,5 +909,16 @@ padding: 10px 0 25px;
     .block-avtor {
         flex-direction: column;
         align-items: center;
+    }
+
+    .footer-column {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        width: 100%;
+
     }
 }
