@@ -158,6 +158,32 @@ img {
 
 /* offer block ================================ */
 
+/* new */
+.offer-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+}
+.offer-wrapper .offer-box:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+    height: 100%;
+}
+.offer-wrapper .offer-box:nth-child(2) {
+    grid-column: span 2;
+    height: 250px;
+}
+.offer-wrapper .offer-box:nth-child(3),
+.offer-wrapper .offer-box:nth-child(4) {
+    height: 210px;
+}
+.offer-wrapper .offer-box:nth-child(3) .offer-box__title,
+.offer-wrapper .offer-box:nth-child(4) .offer-box__title{
+    font-size: 16px;
+}
+/* new */
+
 .offer {
     padding: 30px 0;
 }
@@ -184,14 +210,14 @@ img {
     /* margin-right: 4%; */
 }
 
-.offer-right{
+/* .offer-right{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     gap: 2%;
-}
+} */
 
-.offer-right .offer-box:first-child {
+/* .offer-right .offer-box:first-child {
     grid-column: span 2;
 }
 
@@ -202,19 +228,19 @@ img {
 
 .offer-right .offer-box {
     height: 250px;
-}
+} */
 
 /* .offer-right__bottom {
     margin-top: 2%;
 } */
 
-.offer-right .offer-box.offer_small-box {
+/* .offer-right .offer-box.offer_small-box {
     height: 210px;
 }
 
 .offer-right .offer-right__bottom  .offer-box:nth-child(1) {
     margin-right: 2%;
-}
+} */
 
 .offer-box {
     position: relative;
@@ -955,9 +981,35 @@ padding: 10px 0 25px;
     .content-right {
         padding-left: 0;
     }
+
+    .offer-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 10px;
+    }
+    .offer-wrapper .offer-box:nth-child(1) {
+        grid-column: span 2;
+        grid-row: span 1;
+        height: 470px;
+    }
 }
 
 @media screen and (max-width: 768px) {
+    .offer-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 10px;
+    }
+    .offer-wrapper .offer-box:nth-child(1) {
+        grid-column: span 1;
+        grid-row: span 1;
+        height: 470px;
+    }
+    .offer-wrapper .offer-box:nth-child(2) {
+        grid-column: span 1;
+    }
     .offer-right{
         grid-template-columns: 1fr ;
         gap: 1%;
@@ -988,7 +1040,7 @@ padding: 10px 0 25px;
         margin-bottom: 30px;
     }
 
-    .offer-right .offer-box:nth-child(1) .offer-box__title {
+    .offer-wrapper .offer-box:nth-child(2) .offer-box__title {
         font-size: 16px;
     }
 
@@ -1002,4 +1054,5 @@ padding: 10px 0 25px;
         width: 100%;
 
     }
+
 }
